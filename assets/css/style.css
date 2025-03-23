@@ -1,0 +1,39 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation styling */
+nav {
+  background: #2c3e50;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+  }
+  
+  nav a {
+    display: block;
+    margin: 1rem 0;
+  }
+}
