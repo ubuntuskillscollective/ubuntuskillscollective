@@ -10,8 +10,5 @@ theme: minima
 twitter_username: YouthSkillsSA  
 facebook_username: YouthSkillsSA  
 
-# Plugins (safe list for GitHub Pages)  
-plugins:
-  - jekyll-seo-tag  
 
 
