@@ -1,14 +1,15 @@
-# _config.yml
+title: YouthSkills SA
+description: "Empowering South African youth through free skills training"
+baseurl: ""
+url: "https://yourusername.github.io" # Replace with your repo URL
+theme: minima
 
-title: YouthSkills SA  
-description: "Empowering South African youth through free skills training and job placements"  
-baseurl: ""  
-url: "https://yourusername.github.io" # Replace with your GitHub Pages URL  
-theme: minima  
+plugins:
+  - jekyll-seo-tag
 
-# Social media handles (optional but recommended)  
-twitter_username: YouthSkillsSA  
-facebook_username: YouthSkillsSA  
+# Optional social handles
+twitter_username: YouthSkillsSA
+facebook_username: YouthSkillsSA
 
 
 
