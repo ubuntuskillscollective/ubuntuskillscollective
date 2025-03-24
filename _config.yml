@@ -1,15 +1,13 @@
+-- _config.yml --
+```yaml
 title: YouthSkills SA
-description: "Empowering South African youth through free skills training"
-baseurl: ""
-url: "https://yourusername.github.io" # Replace with your repo URL
-theme: minima
+description: Empowering South African Youth by bridging the skills gap and creating job opportunities.
+baseurl: ""  # Leave blank if deploying to the root domain
+url: "https://yourwebsite.com"  # Change to your actual domain
+markdown: kramdown  # Allows Markdown usage
+theme: minima  # Optional, choose a Jekyll theme or use custom styles
+```
 
-plugins:
-  - jekyll-seo-tag
-
-# Optional social handles
-twitter_username: YouthSkillsSA
-facebook_username: YouthSkillsSA
 
 
 
