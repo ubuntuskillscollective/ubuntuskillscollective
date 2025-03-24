@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/partnerships.html">Partnerships</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+---
+layout: default
+title: Home
+---
 
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Ubuntu Skills Collective. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<h2>Partner with Ubuntu Skills Collective: Empowering Communities, Building Futures</h2>
+<p>
+  South Africa faces a dual crisis—youth unemployment and a critical skills mismatch.
+  At Ubuntu Skills Collective, we are addressing these challenges by creating a pipeline
+  of job-ready talent in high-demand sectors such as renewable energy, tech, and trades.
+</p>
+<p>Explore our site to learn more about our mission, partnership opportunities, and how you can support our cause:</p>
+<ul>
+  <li><a href="{{ site.baseurl }}/about.html">About Us</a></li>
+  <li><a href="{{ site.baseurl }}/partnerships.html">Partnerships</a></li>
+  <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
+</ul>
