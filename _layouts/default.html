@@ -3,28 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-    <meta name="description" content="Partner with Ubuntu Skills Collective to empower communities and build futures by addressing youth unemployment and skills mismatch in high-demand sectors.">
-    <meta name="keywords" content="Ubuntu Skills Collective, youth unemployment, skills mismatch, renewable energy, tech, trades, South Africa">
+    <title>{{ site.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Ubuntu Skills Collective</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
-                <li><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li><a href="{{ site.baseurl }}/partnerships.html">Partnerships</a></li>
-                <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {{ content }}
-    </main>
+    <nav>
+        <ul>
+            <li><a href="{{ site.baseurl }}/#about">About Us</a></li>
+            <li><a href="{{ site.baseurl }}/#partnerships">Partnerships</a></li>
+            <li><a href="{{ site.baseurl }}/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Empowering Communities, Building Futures</h1>
+        <p>Join us in addressing youth unemployment and skills mismatch in South Africa.</p>
+        <a href="https://forms.gle/bqR8zdDjbgqFfewt6" class="cta-button">Get Involved</a>
+    </section>
+
+    <section id="about">
+        <h2>About Ubuntu Skills Collective</h2>
+        <h3>Our Mission</h3>
+        <p>At Ubuntu Skills Collective, our mission is to empower South African youth by bridging the skills gap and equipping them with the tools and training needed to succeed in high-demand sectors. By transforming challenges into opportunities, we drive economic growth and build sustainable futures for communities.</p>
+        <h3>What We Do</h3>
+        <ul>
+            <li><strong>Youth Unemployment:</strong> Creating pathways into meaningful employment for unemployed or underemployed youth.</li>
+            <li><strong>Skills Mismatch:</strong> Addressing shortages in key industries like renewable energy, technology, and trades by aligning training programs with market demands.</li>
+        </ul>
+    </section>
+
+    <section id="partnerships">
+        <h2>Strategic Partnership Opportunity</h2>
+        <p>South Africa faces a dual crisis: youth unemployment and a critical skills mismatch that stifles economic growth. At Ubuntu Skills Collective, we are creating a pipeline of job-ready talent in high-demand sectors such as renewable energy, tech, and trades. We invite your organization to join us in this transformative mission.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For more information about our programs, partnership opportunities, or to offer support, please reach out:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:youthskills@org.co.za">youthskills@org.co.za</a></li>
+            <li><strong>Phone:</strong> +27 12 345 6789</li>
+            <li><strong>Address:</strong> 123 YouthSkills SA, Johannesburg, South Africa</li>
+        </ul>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Ubuntu Skills Collective. All rights reserved.</p>
+        <p>&copy; {{ site.time | date: "%Y" }} Ubuntu Skills Collective. All rights reserved.</p>
     </footer>
 </body>
 </html>
