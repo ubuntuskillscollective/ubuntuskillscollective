@@ -1,0 +1,6 @@
+title: Ubuntu Skills Collective
+description: Empowering Communities, Building Futures
+baseurl: "/ubuntuskillscollective"
+url: "https://ubuntuskillscollective.github.io" # Update if you use a custom domain
+markdown: kramdown
+theme: minima
