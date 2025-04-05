@@ -1,0 +1,45 @@
+title: Ubuntu Skills Collective
+description: Empowering South Africa's Youth for a Brighter Future
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ubuntuskillscollective.github.io" # the base hostname & protocol for your site
+theme: minima
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Include additional files
+include:
+  - _pages
+  - _posts
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: "html"
