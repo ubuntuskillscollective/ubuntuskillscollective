@@ -1,10 +1,10 @@
 /* Root Variables for Color Scheme */
 :root {
-  --bg-color: #f1f1f1; /* Light Gray Background */
+  --bg-color: #f0f2f5; /* Light Background */
   --text-color: #333333; /* Dark Text */
-  --accent-color: #4CAF50; /* Green Accent */
-  --secondary-accent: #FF5722; /* Orange Accent */
-  --header-bg-color: #333333; /* Dark Header */
+  --accent-color: #007BFF; /* Blue Accent */
+  --secondary-accent: #28A745; /* Green Accent */
+  --header-bg-color: #1f1f1f; /* Dark Header */
   --header-text-color: #ffffff; /* White Header Text */
   --card-bg-color: #ffffff; /* White Card Background */
   --card-shadow: rgba(0, 0, 0, 0.1); /* Subtle Card Shadow */
@@ -22,7 +22,7 @@ body {
   color: var(--text-color);
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.7;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 h1, h2, h3, h4 {
@@ -37,14 +37,14 @@ p, li, a {
 }
 
 a {
-  color: var(--secondary-accent);
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--accent-color);
+  color: var(--secondary-accent);
 }
 
 .container {
@@ -64,11 +64,6 @@ a:hover {
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-}
-
-.header p {
-  font-size: 1.2rem;
-  color: #dddddd;
 }
 
 /* Card Styling */
@@ -117,7 +112,7 @@ button:hover, .btn:hover {
 /* Mobile Responsive */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .card {
