@@ -1,12 +1,12 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Root Variables for Color Scheme */
 :root {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --accent-color: #bb86fc;
-  --secondary-accent: #03dac5;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #007bff;
+  --secondary-accent: #6c757d;
 }
 
 /* Reset & Global Styles */
@@ -15,23 +15,23 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Roboto', sans-serif;
   color: var(--accent-color);
 }
 
 p, li, a {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
 }
 
 a {
-  color: var(--secondary-accent);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -49,26 +49,26 @@ a:hover {
 }
 
 .card {
-  background-color: #1e1e1e;
+  background-color: #f8f9fa;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.7);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
 }
 
 button, .btn {
   background-color: var(--accent-color);
-  color: #121212;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Roboto', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
