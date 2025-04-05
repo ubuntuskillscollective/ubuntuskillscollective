@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ubuntu Skills Collective</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>{{ page.title | default: "Ubuntu Skills Collective" }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Merriweather&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <h1>Ubuntu Skills Collective</h1>
+    </header>
     <div class="container">
-      {% include "../index.html" %}
+      {{ content }}
     </div>
   </body>
 </html>
