@@ -2,8 +2,8 @@
 :root {
   --bg-color: #f4f4f9;
   --text-color: #333333;
-  --accent-color: #007bff;
-  --secondary-accent: #6c757d;
+  --accent-color: #FF6347; /* Tomato */
+  --secondary-accent: #20B2AA; /* LightSeaGreen */
   --header-bg-color: #333333;
   --header-text-color: #ffffff;
   --card-bg-color: #ffffff;
@@ -69,6 +69,32 @@ a:hover {
 .header p {
   font-size: 1.1rem;
   color: #dddddd;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: var(--secondary-accent);
 }
 
 /* Card Styling */
