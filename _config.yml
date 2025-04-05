@@ -3,8 +3,6 @@ description: Empowering South Africa's Youth for a Brighter Future
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ubuntuskillscollective.github.io" # the base hostname & protocol for your site
 theme: minima
-plugins:
-  - jekyll-feed
 
 # Build settings
 markdown: kramdown
