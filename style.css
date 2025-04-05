@@ -6,74 +6,125 @@
   --secondary-accent: #6c757d;
   --header-bg-color: #333333;
   --header-text-color: #ffffff;
+  --card-bg-color: #ffffff;
 }
 
 /* Reset & Global Styles */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   scroll-behavior: smooth;
+  padding: 0 1rem;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Open Sans', Arial, sans-serif;
   color: var(--accent-color);
+  margin-bottom: 0.5rem;
 }
 
 p, li, a {
   color: var(--text-color);
+  font-size: 1rem;
 }
 
 a {
   color: var(--accent-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--secondary-accent);
 }
 
 .container {
   max-width: 900px;
-  margin: auto;
-  padding: 2rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
+/* Header Section */
 .header {
   background-color: var(--header-bg-color);
   color: var(--header-text-color);
-  padding: 1rem 0;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #dddddd;
+}
+
+/* Card Styling */
 .card {
-  background-color: #ffffff;
+  background-color: var(--card-bg-color);
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+.card h2 {
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 1.2rem;
+}
+
+/* Button Styling */
 button, .btn {
+  display: inline-block;
   background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
 }
 
 button:hover, .btn:hover {
   background-color: var(--secondary-accent);
+  transform: scale(1.02);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  button, .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
