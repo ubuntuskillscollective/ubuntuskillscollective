@@ -1,126 +1,105 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Merriweather&display=swap');
+
 /* Root Variables for Color Scheme */
 :root {
-  --bg-color: #f0f2f5; /* Light Background */
-  --text-color: #333333; /* Dark Text */
-  --accent-color: #007BFF; /* Blue Accent */
-  --secondary-accent: #28A745; /* Green Accent */
-  --header-bg-color: #1f1f1f; /* Dark Header */
-  --header-text-color: #ffffff; /* White Header Text */
-  --card-bg-color: #ffffff; /* White Card Background */
-  --card-shadow: rgba(0, 0, 0, 0.1); /* Subtle Card Shadow */
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #bb86fc;
+  --secondary-accent: #03dac5;
 }
 
 /* Reset & Global Styles */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.7;
-  padding: 0 1.5rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Fira Code', monospace;
   color: var(--accent-color);
-  margin-bottom: 0.5rem;
 }
 
 p, li, a {
+  font-family: 'Merriweather', serif;
   color: var(--text-color);
-  font-size: 1rem;
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--secondary-accent);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--secondary-accent);
 }
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-/* Header Section */
-.header {
-  background-color: var(--header-bg-color);
-  color: var(--header-text-color);
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Card Styling */
-.card {
-  background-color: var(--card-bg-color);
-  border-radius: 12px;
+  margin: auto;
   padding: 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 4px 15px var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px var(--card-shadow);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.7);
 }
 
-.card h2 {
-  margin-bottom: 1rem;
-  color: var(--secondary-accent);
-}
-
-.card p {
-  margin-bottom: 1.2rem;
-}
-
-/* Button Styling */
 button, .btn {
-  display: inline-block;
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: #121212;
   border: none;
   border-radius: 8px;
-  padding: 0.7rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   font-size: 1rem;
+  font-family: 'Fira Code', monospace;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 button:hover, .btn:hover {
   background-color: var(--secondary-accent);
-  transform: scale(1.02);
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 2rem;
+/* Smooth fade-in on scroll */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .card {
-    padding: 1.5rem;
-  }
+.fade-in {
+  animation: fadeInUp 1s ease both;
+}
 
-  button, .btn {
-    width: 100%;
-    text-align: center;
-  }
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
