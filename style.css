@@ -1,12 +1,13 @@
 /* Root Variables for Color Scheme */
 :root {
-  --bg-color: #f4f4f9;
-  --text-color: #333333;
-  --accent-color: #FF6347; /* Tomato */
-  --secondary-accent: #20B2AA; /* LightSeaGreen */
-  --header-bg-color: #333333;
-  --header-text-color: #ffffff;
-  --card-bg-color: #ffffff;
+  --bg-color: #f1f1f1; /* Light Gray Background */
+  --text-color: #333333; /* Dark Text */
+  --accent-color: #4CAF50; /* Green Accent */
+  --secondary-accent: #FF5722; /* Orange Accent */
+  --header-bg-color: #333333; /* Dark Header */
+  --header-text-color: #ffffff; /* White Header Text */
+  --card-bg-color: #ffffff; /* White Card Background */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Subtle Card Shadow */
 }
 
 /* Reset & Global Styles */
@@ -21,7 +22,6 @@ body {
   color: var(--text-color);
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.7;
-  scroll-behavior: smooth;
   padding: 0 1rem;
 }
 
@@ -37,14 +37,14 @@ p, li, a {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--secondary-accent);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--secondary-accent);
+  color: var(--accent-color);
 }
 
 .container {
@@ -62,39 +62,13 @@ a:hover {
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #dddddd;
-}
-
-.nav {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.nav li {
-  display: inline;
-}
-
-.nav a {
-  color: var(--header-text-color);
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.nav a:hover {
-  background-color: var(--secondary-accent);
 }
 
 /* Card Styling */
@@ -103,17 +77,18 @@ a:hover {
   border-radius: 12px;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--card-shadow);
 }
 
 .card h2 {
   margin-bottom: 1rem;
+  color: var(--secondary-accent);
 }
 
 .card p {
@@ -142,7 +117,7 @@ button:hover, .btn:hover {
 /* Mobile Responsive */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .card {
