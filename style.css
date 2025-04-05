@@ -1,37 +1,37 @@
-/* Global Styles */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Merriweather&display=swap');
+
+/* Root Variables for Color Scheme */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #bb86fc;
+  --secondary-accent: #03dac5;
+}
+
+/* Reset & Global Styles */
 body {
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Merriweather', serif;
-  line-height: 1.7;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #1e1e1e;
+h1, h2, h3, h4 {
   font-family: 'Fira Code', monospace;
-  font-size: 1.5rem;
-  color: #bb86fc;
+  color: var(--accent-color);
 }
 
-/* Card-like container */
-.card {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #1e1e1e;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(187, 134, 252, 0.3);
+p, li, a {
+  font-family: 'Merriweather', serif;
+  color: var(--text-color);
 }
 
-/* Accent elements */
 a {
-  color: #03dac5;
+  color: var(--secondary-accent);
   text-decoration: none;
 }
 
@@ -39,21 +39,67 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  text-align: center;
+.container {
+  max-width: 900px;
+  margin: auto;
   padding: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid #333;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/* Animations */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.7);
+}
+
+button, .btn {
+  background-color: var(--accent-color);
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--secondary-accent);
+}
+
+/* Smooth fade-in on scroll */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease both;
+}
+
 section {
-  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
 }
 
-section:hover {
-  transform: scale(1.01);
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
