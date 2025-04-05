@@ -38,9 +38,6 @@ a:hover {
   max-width: 900px;
   margin: auto;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .card {
@@ -54,46 +51,4 @@ a:hover {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-}
-
-button, .btn {
-  background-color: var(--accent-color);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--secondary-accent);
-}
-
-/* Smooth fade-in on scroll */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeInUp 1s ease both;
-}
-
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
