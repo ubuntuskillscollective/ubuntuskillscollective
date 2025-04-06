@@ -1,13 +1,12 @@
 /* Root Variables for Color Scheme */
 :root {
-  --bg-color: #f0f2f5; /* Light Background */
-  --text-color: #333333; /* Dark Text */
-  --accent-color: #007BFF; /* Blue Accent */
-  --secondary-accent: #28A745; /* Green Accent */
-  --header-bg-color: #1f1f1f; /* Dark Header */
-  --header-text-color: #ffffff; /* White Header Text */
-  --card-bg-color: #ffffff; /* White Card Background */
-  --card-shadow: rgba(0, 0, 0, 0.1); /* Subtle Card Shadow */
+  --bg-color: #f4f4f9;
+  --text-color: #333333;
+  --accent-color: #007bff;
+  --secondary-accent: #6c757d;
+  --header-bg-color: #333333;
+  --header-text-color: #ffffff;
+  --card-bg-color: #ffffff;
 }
 
 /* Reset & Global Styles */
@@ -22,7 +21,8 @@ body {
   color: var(--text-color);
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.7;
-  padding: 0 1.5rem;
+  scroll-behavior: smooth;
+  padding: 0 1rem;
 }
 
 h1, h2, h3, h4 {
@@ -62,8 +62,13 @@ a:hover {
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #dddddd;
 }
 
 /* Card Styling */
@@ -72,18 +77,17 @@ a:hover {
   border-radius: 12px;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 0 4px 15px var(--card-shadow);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px var(--card-shadow);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .card h2 {
   margin-bottom: 1rem;
-  color: var(--secondary-accent);
 }
 
 .card p {
@@ -112,7 +116,7 @@ button:hover, .btn:hover {
 /* Mobile Responsive */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .card {
